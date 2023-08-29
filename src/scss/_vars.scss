@@ -1,0 +1,19 @@
+:root {
+  // base
+  --font-family: "Muller", "Inter", sans-serif;
+  --content-width: 1820px;
+  --container-offset: 50px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --white-2: #f6f8fa;
+  --black: #121212;
+  --beige: #fff8f0;
+  --blue: #0052c8;
+  --blue-2: #0045a9;
+
+  // --font
+  --font-primary: "Muller", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}

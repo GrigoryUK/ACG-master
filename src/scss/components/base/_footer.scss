@@ -1,0 +1,236 @@
+.footer {
+  background: var(--blue);
+  padding: 6.8rem 0 7rem 0;
+
+  @include tablet {
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  @include mobile {
+    padding-top: 1.5rem;
+  }
+
+  .container {
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+
+    svg {
+      fill: var(--white);
+
+      min-width: 20rem;
+
+      @include tablet {
+        min-width: 13.6rem;
+        max-width: 13.6rem;
+      }
+    }
+
+    @include tablet {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      gap: 3rem;
+    }
+
+    &--top {
+      display: flex;
+      align-items: flex-start;
+      margin-right: 20rem;
+
+      @include big-desktop {
+        margin-right: 0;
+      }
+
+      @include tablet {
+        flex-direction: column;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include tablet {
+          gap: 0;
+          width: 100%;
+        }
+
+        &:nth-child(1) {
+          margin-right: 24rem;
+
+          @include tablet {
+            margin-right: 0;
+
+            ul {
+              li {
+                &:first-child {
+                  a {
+                    border-top: 1px solid var(--blue-2);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          margin-right: 28rem;
+
+          @include tablet {
+            margin-right: 0;
+          }
+        }
+
+        &:last-child {
+          ul {
+            li {
+              &:last-child {
+                a {
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+          @include tablet {
+            ul {
+              padding-top: 1.7rem;
+              gap: 1.7rem;
+
+              @include mobile {
+                gap: 1.5rem;
+                padding-top: 1.5rem;
+              }
+            }
+            a {
+              border: none;
+              padding: 0;
+              padding-left: 1.5rem;
+            }
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include tablet {
+          gap: 0;
+        }
+      }
+
+      li {
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      a {
+        font-family: var(--font-primary);
+        display: flex;
+        color: var(--white);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        @include tablet {
+          display: flex;
+          padding-left: 1.5rem;
+          padding-bottom: 1.7rem;
+          padding-top: 1.7rem;
+          border-bottom: 1px solid var(--blue-2);
+        }
+
+        @include mobile {
+          font-size: 1.3rem;
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+      }
+
+      span {
+        display: flex;
+        font-family: var(--font-primary);
+        color: var(--white);
+        font-size: 1.5rem;
+        opacity: 0.5;
+
+        @include tablet {
+          padding-left: 1.5rem;
+          padding-top: 1.7rem;
+        }
+
+        @include mobile {
+          padding-top: 1.5rem;
+        }
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet {
+        padding: 0 1.5rem;
+      }
+
+      span {
+        opacity: 0.7;
+        font-family: var(--font-primary);
+        color: var(--white);
+        font-size: 1.6rem;
+
+        @include mobile {
+          font-size: 1.3rem;
+          max-width: 50%;
+        }
+      }
+
+      a {
+        display: flex;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100px;
+        border: 1px solid var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: var(--white);
+          width: 1.1rem;
+        }
+      }
+    }
+  }
+}

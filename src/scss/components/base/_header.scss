@@ -1,0 +1,183 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__container {
+    max-width: 192rem;
+    padding: 0 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+    @include tablet {
+      padding: 0 1.5rem;
+      padding-top: 2rem;
+    }
+
+    @include mobile {
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    width: 16.4rem;
+
+    @include mobile {
+      width: 13.6rem;
+    }
+
+    svg {
+      width: 16.4rem;
+      fill: var(--blue);
+
+      @include mobile {
+        width: 13.6rem;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.3rem;
+    // margin-top: 1.8rem;
+    @include tablet {
+      display: none;
+    }
+
+    &--top {
+      display: flex;
+      gap: 7.5rem;
+
+      a {
+        color: var(--black);
+      }
+
+      nav {
+        display: flex;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 4.2rem;
+
+        li {
+          display: flex;
+        }
+
+        a {
+          font-family: var(--font-secondary);
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          text-align: right;
+        }
+      }
+    }
+
+    &--languages {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        text-align: right;
+        font-family: var(--font-secondary);
+        text-transform: uppercase;
+        display: block;
+
+        &.active {
+          padding: 0.7rem 1.4rem;
+          border-radius: 100px;
+          border: 1px solid rgba(18, 18, 18, 0.5);
+        }
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      align-items: center;
+      gap: 4.3rem;
+      a {
+        display: block;
+        font-family: var(--font-primary);
+        opacity: 0.7;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        color: var(--black);
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 6rem;
+    height: 6rem;
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include mobile {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .burger {
+      width: 6rem;
+      height: 6rem;
+      position: relative;
+      border-radius: 100px;
+      border: 2px solid rgba(0, 82, 200, 0.2);
+
+      @include mobile {
+        width: 5rem;
+        height: 5rem;
+        border: 1px solid rgba(0, 82, 200, 0.2);
+      }
+
+      &__line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.8rem;
+        height: 0.2rem;
+        border-radius: 2px;
+        background: var(--blue);
+
+        @include mobile {
+          height: 0.1rem;
+        }
+
+        &:first-child {
+          margin-top: 0.2rem;
+        }
+
+        &:last-child {
+          margin-top: -0.2rem;
+        }
+      }
+    }
+  }
+
+  &__padding {
+    padding-top: 9.153rem;
+
+    @include tablet {
+      padding-top: 8rem;
+    }
+
+    @include mobile {
+      padding-top: 6.5rem;
+    }
+  }
+}
