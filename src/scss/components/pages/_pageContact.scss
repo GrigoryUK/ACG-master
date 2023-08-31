@@ -1,0 +1,231 @@
+.pageContact {
+  h2 {
+    margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 3rem;
+    }
+  }
+  &__container {
+    &--small {
+      max-width: 120.8rem;
+      margin: 0 auto;
+    }
+  }
+
+  .address {
+    margin-bottom: 10rem;
+
+    @include mobile {
+      margin-bottom: 7rem;
+    }
+
+    &__rows {
+      margin-bottom: 10rem;
+
+      @include tablet {
+        margin-bottom: 7rem;
+      }
+
+      @include mobile {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__row {
+      border-bottom: 1px solid var(--white-3);
+      padding-bottom: 4rem;
+
+      @include mb(4rem);
+
+      @include tablet {
+        padding-bottom: 2.5rem;
+        @include mb(2.5rem);
+      }
+
+      @include mobile {
+        padding-bottom: 3rem;
+        @include mb(3rem);
+      }
+
+      &--grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include mobile {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2rem;
+        }
+      }
+
+      &--block {
+        span {
+          display: block;
+          font-size: 1.8rem;
+          font-weight: 500;
+          margin-bottom: 2rem;
+
+          &:nth-child(2) {
+            display: block;
+            color: var(--blue);
+            font-weight: 400;
+            font-size: 2.4rem;
+
+            @include tablet {
+              font-size: 2.2rem;
+            }
+
+            @include mobile {
+              font-size: 1.8rem;
+              max-width: 80%;
+            }
+          }
+
+          @include tablet {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+          }
+
+          @include mobile {
+            font-size: 1.4rem;
+          }
+        }
+
+        a {
+          display: block;
+          color: var(--blue);
+          text-decoration: underline;
+          text-underline-offset: 0.6rem;
+          font-size: 2.4rem;
+
+          @include tablet {
+            font-size: 2.2rem;
+          }
+
+          @include mobile {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    button {
+      margin-top: 5rem;
+      max-width: 24.6rem;
+
+      @include tablet {
+        margin-top: 4rem;
+      }
+
+      @include mobile {
+        margin-top: 3rem;
+      }
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .form {
+    &__container {
+      background: var(--white-2);
+      border-radius: 1rem;
+      padding: 4rem 5rem 7rem;
+
+      @include tablet {
+        padding: 4rem 3rem 7rem;
+      }
+
+      @include mobile {
+        padding: 1.5rem 1.5rem 4rem;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 2.4rem;
+        font-size: 2.2rem;
+
+        @include tablet {
+          max-width: 60%;
+          margin-bottom: 3rem;
+        }
+
+        @include mobile {
+          font-size: 1.6rem;
+          max-width: 100%;
+        }
+      }
+
+      button {
+        max-width: 24.6rem;
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      margin-bottom: 4rem;
+
+      @include mobile {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__input {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid var(--white-4);
+      padding-bottom: 3rem;
+      @include mb(3rem);
+
+      @include tablet {
+        padding-bottom: 3rem;
+        @include mb(3rem);
+      }
+
+      @include mobile {
+        padding-bottom: 2rem;
+        @include mb(2rem);
+      }
+
+      input {
+        font-size: 1.8rem;
+
+        &::placeholder {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    &__last {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &--copyright {
+        max-width: 43rem;
+        span,
+        a {
+          display: inline;
+          margin: 0;
+          font-size: 1.4rem;
+          opacity: 0.4;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

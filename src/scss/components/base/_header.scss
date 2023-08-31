@@ -1,26 +1,27 @@
 .header {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  max-width: 192rem;
+  padding: 0 5rem;
+  padding-top: 2rem;
 
+  @include tablet {
+    padding: 0 1.5rem;
+    padding-top: 2rem;
+  }
+
+  @include mobile {
+    padding-top: 1.5rem;
+  }
   &__container {
-    max-width: 192rem;
-    padding: 0 5rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
-
-    @include tablet {
-      padding: 0 1.5rem;
-      padding-top: 2rem;
-    }
-
-    @include mobile {
-      padding-top: 1.5rem;
-    }
   }
 
   &__logo {
@@ -75,7 +76,7 @@
         }
 
         a {
-          font-family: var(--font-secondary);
+          font-family: var(--font-primary);
           font-size: 1.4rem;
           text-transform: uppercase;
           text-align: right;
@@ -90,12 +91,13 @@
 
       a {
         text-align: right;
-        font-family: var(--font-secondary);
+        font-family: var(--font-primary);
         text-transform: uppercase;
         display: block;
+        line-height: 1;
 
         &.active {
-          padding: 0.7rem 1.4rem;
+          padding: 1rem 1.4rem 0.7rem;
           border-radius: 100px;
           border: 1px solid rgba(18, 18, 18, 0.5);
         }
@@ -111,7 +113,6 @@
         font-family: var(--font-primary);
         opacity: 0.7;
         text-decoration: underline;
-        text-underline-offset: 3px;
         color: var(--black);
       }
     }

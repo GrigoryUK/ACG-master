@@ -45,8 +45,69 @@ img {
   display: flex;
 }
 
+p {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.8rem;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+}
+
+p + p {
+  margin-top: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 3.2rem;
+
+  @include tablet {
+    font-size: 2.8rem;
+  }
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 4.2rem;
+
+  @include tablet {
+    font-size: 3.6rem;
+  }
+
+  @include mobile {
+    font-size: 2.4rem;
+  }
+}
+
 a {
   text-decoration: none;
+  color: var(--black);
+  text-underline-offset: 0.4rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
 .site-container {
@@ -70,6 +131,9 @@ a {
   padding: 0;
 }
 
+.relative {
+  position: relative;
+}
 .input-reset {
   -webkit-appearance: none;
   appearance: none;

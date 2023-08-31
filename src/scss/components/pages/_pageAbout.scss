@@ -1,0 +1,185 @@
+.pageAbout {
+  .titleC {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 3rem;
+    }
+  }
+  &__container {
+    max-width: 192rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    @include tablet {
+      padding: 0 1.5rem;
+      margin-top: 6rem;
+    }
+
+    @include mobile {
+      margin-top: 5rem;
+      padding: 0;
+    }
+
+    h3 {
+      color: var(--blue);
+      margin-bottom: 4rem;
+
+      @include tablet {
+        margin-bottom: 3rem;
+      }
+
+      @include mobile {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--small {
+      max-width: 120.8rem;
+      margin: 0 auto;
+
+      @include mobile {
+        padding: 0 1.5rem;
+      }
+
+      p {
+        max-width: 89rem;
+      }
+
+      margin-bottom: 15.8rem;
+
+      @include tablet {
+        margin-bottom: 10rem;
+      }
+
+      @include mobile {
+        margin-bottom: 7rem;
+      }
+
+      &--last {
+        margin: 0 auto;
+        p {
+          max-width: 60%;
+        }
+
+        button {
+          margin-top: 4rem;
+          max-width: 29.1rem;
+
+          @include mobile {
+            margin-top: 3rem;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    &--big {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+      margin-bottom: 13rem;
+
+      @include tablet {
+        gap: 6rem;
+        margin-bottom: 6rem;
+      }
+
+      @include mobile {
+        gap: 5rem;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    &--text {
+      background: var(--white-2);
+      border-radius: 0px 1rem 1rem 0px;
+      width: 50%;
+      padding: 13rem 5rem 34rem 13rem;
+
+      @include big-desktop {
+        padding: 13rem 5rem 13rem 6rem;
+      }
+
+      @include tablet {
+        padding: 5rem 2.6rem 13rem 3rem;
+        border-radius: 0px 0px 1rem 1rem;
+        width: 100%;
+      }
+
+      @include mobile {
+        padding: 3rem 1.5rem 7rem;
+      }
+
+      h3,
+      p {
+        max-width: 70rem;
+      }
+    }
+
+    &--slider {
+      width: 50%;
+      margin-top: 13rem;
+
+      @include tablet {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .slider-about {
+        &--container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include tablet {
+            background: var(--white-2);
+          }
+
+          img {
+            border-radius: 1rem 0px 0px 1rem;
+            margin-bottom: 2rem;
+
+            @include tablet {
+              border-radius: 1rem 1rem 0px 0px;
+            }
+
+            @include mobile {
+              margin-bottom: 1rem;
+            }
+          }
+
+          p {
+            text-align: center;
+            width: 60%;
+
+            @include mobile {
+              width: 90%;
+            }
+          }
+
+          @keyframes opacity-in {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
