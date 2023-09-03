@@ -104,6 +104,29 @@ a {
   text-underline-offset: 0.4rem;
 }
 
+ul {
+  padding: 0;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  li {
+    color: var(--black);
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+
+    @include mobile {
+      font-size: 1.4rem;
+    }
+    &::marker {
+      font-size: 60%;
+      line-height: 1;
+    }
+  }
+}
+
 input {
   outline: none;
   border: none;

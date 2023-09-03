@@ -1,0 +1,15 @@
+.pageMission {
+  &__container {
+    max-width: 192rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    @include tablet {
+      margin-top: 6rem;
+    }
+
+    @include mobile {
+      margin-top: 5rem;
+    }
+  }
+}

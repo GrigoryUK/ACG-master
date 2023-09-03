@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    z-index: var(--z-dropdown-primary);
 
     @include tablet {
       flex-wrap: wrap;

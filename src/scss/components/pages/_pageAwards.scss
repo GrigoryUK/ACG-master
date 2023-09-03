@@ -1,2 +1,87 @@
-.pageAbout {
+.pageAwards {
+  &__container {
+    margin: 0 auto;
+    margin-top: 10rem;
+    max-width: 192rem;
+    padding: 0 5rem;
+
+    button {
+      max-width: 32.1rem;
+      margin: 0 auto;
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+
+    @include tablet {
+      padding: 0 1.5rem;
+      margin-top: 6rem;
+    }
+
+    @include mobile {
+      margin-top: 5rem;
+    }
+
+    h3 {
+      color: var(--blue);
+      text-align: center;
+      margin-bottom: 10rem;
+
+      @include tablet {
+        margin-bottom: 6rem;
+      }
+
+      @include mobile {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+    column-gap: 2rem;
+    margin-bottom: 5rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.6rem;
+      row-gap: 3rem;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 1.6rem;
+      row-gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .itemC {
+      display: block;
+      align-self: flex-start;
+      &__img {
+        position: relative;
+        display: flex;
+        transition: all 0.2s ease;
+        background: transparent;
+        margin-bottom: 2rem;
+
+        img {
+          max-height: 40rem;
+        }
+      }
+
+      @include hover {
+        .itemC__img {
+          background: var(--white-5);
+        }
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+  }
 }

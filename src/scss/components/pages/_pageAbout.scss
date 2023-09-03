@@ -2,9 +2,24 @@
   .titleC {
     text-align: center;
     margin-bottom: 4rem;
+    font-weight: 500;
 
     @include tablet {
       margin-bottom: 3rem;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 10rem;
+
+    @include tablet {
+      margin-bottom: 6rem;
+    }
+
+    @include mobile {
+      margin-bottom: 5rem;
     }
   }
   &__container {
@@ -33,6 +48,10 @@
       @include mobile {
         margin-bottom: 2rem;
       }
+    }
+
+    h3 {
+      text-align: left;
     }
 
     &--small {
