@@ -1,0 +1,161 @@
+.pageHistory {
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    @include tablet {
+      margin-top: 6rem;
+    }
+
+    @include mobile {
+      margin-top: 5rem;
+    }
+  }
+
+  &__slider {
+    &--pagination {
+      max-width: 192rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 5rem;
+      margin-bottom: 4.4rem;
+
+      @include tablet {
+        padding: 0 1.5rem;
+        margin-bottom: 4rem;
+      }
+
+      @include mobile {
+        margin-bottom: 3.6rem;
+      }
+    }
+    .slider-history {
+      padding-left: max(5rem, calc((100% - 192rem) / 2));
+      overflow: inherit;
+      padding-bottom: 8rem;
+
+      @include tablet {
+        padding-left: max(1.5rem, calc((100% - 192rem) / 2));
+      }
+
+      @include mobile {
+        padding-bottom: 6rem;
+      }
+
+      .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+      .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 1.5rem);
+      }
+
+      .swiper-pagination-bullet {
+        min-width: 0.6rem;
+        min-height: 0.6rem;
+        background: var(--blue);
+        opacity: 0.5;
+        border-radius: 100px;
+
+        @include mobile {
+          min-width: 0.8rem;
+          min-height: 0.8rem;
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+          justify-content: flex-start;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        min-width: 1.4rem;
+        min-height: 1.4rem;
+        border: 2px solid var(--blue);
+        opacity: 1;
+        background: transparent;
+
+        @include mobile {
+          min-width: 1.2rem;
+          min-height: 1.2rem;
+        }
+      }
+
+      .swiper-slide {
+        max-width: 54.6rem;
+
+        @include mobile {
+          max-width: 90%;
+        }
+
+        .itemC {
+          min-height: 40rem;
+          background: var(--white-2);
+          border-radius: 1rem;
+          padding: 4rem;
+          padding-top: 3rem;
+
+          @include mobile {
+            min-height: 37.5rem;
+            padding: 1.5rem;
+          }
+
+          &__title {
+            font-size: 4.2rem;
+            font-weight: 500;
+            color: var(--blue);
+            margin-bottom: 2rem;
+
+            @include mobile {
+              font-size: 2.4rem;
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          &__text {
+            font-size: 1.8rem;
+
+            @include mobile {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &--arrow {
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    &--prev {
+      svg {
+        transform-origin: center center;
+        transform: rotate(-180deg);
+      }
+    }
+
+    &--arrow {
+      svg {
+        width: 6rem;
+        height: 1.2rem;
+
+        @include mobile {
+          width: 4rem;
+        }
+      }
+    }
+  }
+}

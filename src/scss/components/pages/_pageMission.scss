@@ -11,5 +11,149 @@
     @include mobile {
       margin-top: 5rem;
     }
+
+    &--small {
+      max-width: 120.8rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 13rem;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 6rem;
+    }
+
+    @include mobile {
+      margin-bottom: 5rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .itemC {
+      display: block;
+      width: 100%;
+      padding: 5rem;
+      border-top: 1px solid #ced7e1;
+      border-bottom: 1px solid #ced7e1;
+      transition: all 0.2s ease;
+      min-height: 40rem;
+
+      &:not(:last-child) {
+        border-right: 1px solid #ced7e1;
+
+        @include tablet {
+          border-right: none;
+        }
+      }
+
+      @include big-desktop {
+        padding: 1.5rem;
+      }
+
+      @include tablet {
+        min-height: 0;
+        border: none;
+        border-bottom: 1px solid #ced7e1;
+
+        &:nth-child(1) {
+          border-top: 1px solid #ced7e1;
+          border-right: 1px solid #ced7e1;
+
+          @include mobile {
+            border-right: none;
+          }
+        }
+
+        &:nth-child(2) {
+          border-top: 1px solid #ced7e1;
+
+          @include mobile {
+            border-top: none;
+          }
+        }
+
+        &:nth-child(3) {
+          border-right: 1px solid #ced7e1;
+
+          @include mobile {
+            border-right: none;
+          }
+        }
+      }
+
+      @include mobile {
+        padding-bottom: 2rem;
+      }
+
+      &__img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 100px;
+        position: relative;
+        margin-bottom: 10rem;
+
+        @include tablet {
+          margin-bottom: 12rem;
+        }
+
+        @include mobile {
+          width: 7rem;
+          height: 7rem;
+          margin-bottom: 7rem;
+        }
+
+        img {
+          position: absolute;
+          transition: all 0.2s ease;
+        }
+
+        &--active {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      &__title {
+        color: var(--blue);
+        font-size: 6.4rem;
+        font-weight: 500;
+
+        @include tablet {
+          font-size: 4.2rem;
+        }
+
+        @include mobile {
+          font-size: 2.4rem;
+        }
+      }
+
+      &__text {
+        font-size: 1.8rem;
+        color: var(--black);
+
+        @include tablet {
+          font-size: 1.6rem;
+        }
+
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+
+      @include hover {
+        background: #f8fafb;
+        border-color: #f8fafb;
+
+        .itemC__img--active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 }
