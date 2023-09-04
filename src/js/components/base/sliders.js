@@ -46,6 +46,7 @@ export default function sliders() {
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: false,
           },
         },
 

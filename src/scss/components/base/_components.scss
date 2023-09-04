@@ -4,7 +4,7 @@
     font-size: 4.8rem;
     line-height: 1.4;
     color: var(--blue);
-    font-weight: 400;
+    font-weight: 500;
     @include tablet {
       font-size: 4.2rem;
     }
@@ -66,6 +66,10 @@
       font-size: 1.2rem;
       padding: 2rem 7rem 1.8rem;
       width: 100%;
+    }
+
+    @include hover {
+      background: var(--blue-hover);
     }
   }
 }

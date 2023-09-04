@@ -1,0 +1,78 @@
+.filter__secondary {
+  &--nav {
+    margin: 0;
+    padding: 0;
+    gap: 4rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    z-index: var(--z-dropdown-primary);
+
+    @include tablet {
+      gap: 0rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  &--item {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &--btn {
+    background: transparent;
+    border: none;
+    text-align: center;
+    padding: 0;
+    font-weight: 500;
+    font-size: 3.8rem;
+    opacity: 0.4;
+    position: relative;
+    cursor: pointer;
+    line-height: 1.5;
+
+    @include tablet {
+      width: 100%;
+      text-align: center;
+      font-size: 3.2rem;
+    }
+
+    @include mobile {
+      font-size: 2.4rem;
+      text-align: left;
+      width: auto;
+    }
+
+    &.tabs__nav-btn--active {
+      opacity: 1;
+      color: var(--blue);
+
+      &::before {
+        transform: scale(1, 1);
+      }
+    }
+
+    &::before {
+      @include pseudo;
+      position: absolute;
+      left: 0;
+      bottom: 0rem;
+      width: 100%;
+      background: var(--blue);
+      height: 0.3rem;
+      transition: all 0.2s ease-in-out;
+      transform: scale(1, 0);
+
+      @include mobile {
+        height: 0.2rem;
+      }
+    }
+  }
+}

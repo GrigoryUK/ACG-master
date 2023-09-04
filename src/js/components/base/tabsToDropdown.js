@@ -16,7 +16,7 @@ export default function tabsToDropdown() {
           currentItem = $(this),
           container = $(this).closest('.tab-to-dropdown'),
           value = $(this).find('.'+settings.activeClass).text(),
-          toggler = '<div class="selected-tab">'+ value +'<svg class="selected-tab-arrow" width="11" height="7" viewBox="0 0 11 7"><use xlink:href="img/sprite.svg#icon-arrow-dropdown"></use></svg>' +'</div>';
+          toggler = '<div class="selected-tab">'+ '<span class="selected-tab-span">' + value + '</span>' +'<svg class="selected-tab-arrow" width="11" height="7" viewBox="0 0 11 7"><use xlink:href="img/sprite.svg#icon-arrow-dropdown"></use></svg>' +'</div>';
         currentItem.addClass('converted-tab');
         container.prepend(toggler);
 
@@ -46,7 +46,7 @@ export default function tabsToDropdown() {
           if( settings.screenSize >= windowWidth){
             tabConvert_toggle();
             const selected_text = $(this).text();
-            $(this).closest('.tab-to-dropdown').find('.selected-tab').text(selected_text);
+            $(this).closest('.tab-to-dropdown').find('.selected-tab-span').text(selected_text);
           }
         });
 
@@ -79,6 +79,13 @@ export default function tabsToDropdown() {
   (function tabsToDropdown() {
     $('.tabs__nav-to-dropdown').tabConvert({
       activeClass: "tabs__nav-btn--active",
+      screenSize: 576,
+    });
+  })();
+
+  (function tabsToDropdown() {
+    $('.filter__nav-to-dropdown').tabConvert({
+      activeClass: "mixitup-control-active",
       screenSize: 576,
     });
   })();

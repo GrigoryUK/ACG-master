@@ -1,0 +1,323 @@
+.pageProviders {
+  .tabs__secondary {
+    &--content {
+      margin-top: 4rem;
+
+      @include tablet {
+        margin-top: 3rem;
+      }
+    }
+
+    &--btn {
+      @include tablet {
+        font-size: 2.8rem;
+      }
+
+      @include mobile {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__container {
+    &--small {
+      max-width: 120.8rem;
+      margin: 0 auto;
+    }
+
+    &--text {
+      a {
+        color: var(--blue);
+        text-decoration: underline;
+        @include hover {
+          color: var(--blue-hover);
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 7.8rem;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+
+    @include tablet {
+      gap: 3.2rem;
+      margin-bottom: 7rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include mobile {
+      gap: 1.5rem;
+    }
+
+    &--img {
+      position: relative;
+      max-width: 10rem;
+      border-radius: 100%;
+      overflow: hidden;
+
+      @include mobile {
+        max-width: 7rem;
+      }
+
+      .img-hover {
+        position: absolute;
+        transition: all 0.2s ease;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: var(--z-img-hover-providers);
+      }
+    }
+
+    &--text {
+      font-size: 1.8rem;
+      text-decoration: underline;
+      max-width: 41rem;
+
+      @include tablet {
+        font-size: 1.6rem;
+        max-width: 22.5rem;
+      }
+
+      @include mobile {
+        font-size: 1.3rem;
+      }
+    }
+
+    @include hover {
+      .img-hover {
+        opacity: 1;
+        visibility: visible;
+      }
+      .pageProviders__link--text {
+        color: var(--blue);
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    @include tablet {
+      margin-bottom: 4rem;
+    }
+
+    @include mobile {
+      margin-bottom: 5rem;
+      gap: 1rem;
+    }
+
+    &--header {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      &.mobile {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+
+    &--input {
+      width: 100%;
+      font-size: 1.6rem;
+      border-radius: 100px;
+      background: var(--white-2);
+      padding: 2.3rem 3rem 2.1rem;
+      color: var(--black);
+
+      @include mobile {
+        padding: 1.6rem 2rem;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+
+      @include hover {
+        background: var(--white-hover);
+      }
+
+      &.focus-visible {
+        background: var(--white-hover);
+      }
+    }
+
+    &--btn {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--white);
+      padding: 2.3rem 4.7rem 2.1rem;
+      text-transform: uppercase;
+      border-radius: 100px;
+      background: var(--blue);
+
+      @include mobile {
+        padding: 1.6rem 2.1rem;
+        font-size: 1.4rem;
+      }
+
+      @include hover {
+        background: var(--blue-hover);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 7rem;
+
+    @include tablet {
+      margin-top: 5rem;
+    }
+
+    @include mobile {
+      margin-top: 3rem;
+    }
+
+    .itemC {
+      padding-top: 2rem;
+      border-top: 1px solid var(--white-hover);
+      display: grid;
+      grid-template-columns: 40% 60%;
+      margin-bottom: 2rem;
+
+      @include tablet {
+        margin-bottom: 1rem;
+        padding: 2rem;
+        background: var(--white-2);
+        border-radius: 1rem;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      @include mobile {
+        padding: 1.5rem;
+        gap: 1rem;
+      }
+
+      &__title {
+        max-width: 90%;
+
+        @include tablet {
+          max-width: 60%;
+        }
+
+        @include mobile {
+          max-width: 80%;
+        }
+
+        a {
+          display: block;
+          color: var(--blue);
+          font-weight: 500;
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+
+          @include hover {
+            color: var(--blue-hover);
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 1.3rem;
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      &__spans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include tablet {
+          padding-top: 2rem;
+          border-top: 1px solid var(--white-hover);
+        }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          border: none;
+          padding-top: 0;
+        }
+      }
+
+      &__span {
+        @include mobile {
+          border-top: 1px solid var(--white-hover);
+          padding-top: 1rem;
+          margin-bottom: 1rem;
+        }
+        span {
+          &:first-child {
+            display: none;
+
+            @include tablet {
+              display: block;
+              font-size: 1.1rem;
+              opacity: 0.5;
+              margin-bottom: 0.5rem;
+            }
+
+            @include mobile {
+              font-size: 1rem;
+            }
+          }
+
+          &:last-child {
+            font-size: 1.6rem;
+
+            @include mobile {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 40% repeat(3, 1fr);
+    margin-bottom: 1.4rem;
+
+    &--span {
+      font-size: 1.3rem;
+      opacity: 0.5;
+      color: var(--black);
+    }
+    &.desk {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}

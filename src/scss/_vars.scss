@@ -1,8 +1,8 @@
 :root {
   // base
   --font-family: "Muller", "Inter", sans-serif;
-  --content-width: 1820px;
-  --container-offset: 50px;
+  --content-width: 182rem;
+  --container-offset: 5rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
@@ -11,10 +11,13 @@
   --white-3: #dfe6ed;
   --white-4: #ced6de;
   --white-5: #f8fafb;
+  --white-hover: #dee2e7;
   --black: #121212;
   --beige: #fff8f0;
   --blue: #0052c8;
   --blue-2: #0045a9;
+  --blue-hover: #0042a1;
+  --red: #ff1f47;
 
   // --font
   --font-primary: "Muller", sans-serif;
@@ -23,4 +26,7 @@
   // z-index
 
   --z-dropdown-primary: 3;
+  --z-product-bottle: 2;
+  --z-img-hover-providers: 2;
+  --z-fon-news: 2;
 }

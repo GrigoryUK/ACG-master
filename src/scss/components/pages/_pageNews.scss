@@ -30,8 +30,22 @@
       display: block;
       align-self: flex-start;
 
-      img {
+      &__img {
+        position: relative;
         margin-bottom: 1rem;
+
+        &--fon {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: var(--black);
+          transition: all 0.2s ease;
+          z-index: var(--z-fon-news);
+          opacity: 0;
+          visibility: hidden;
+        }
       }
 
       span {
@@ -54,6 +68,7 @@
         max-width: 49rem;
         font-size: 1.8rem;
         font-weight: 500;
+        transition: all 0.2s ease;
 
         @include tablet {
           font-size: 1.6rem;
@@ -61,6 +76,16 @@
 
         @include mobile {
           font-size: 1.4rem;
+        }
+      }
+
+      @include hover {
+        .itemC__img--fon {
+          opacity: 0.2;
+          visibility: visible;
+        }
+        p {
+          color: var(--blue);
         }
       }
     }
@@ -161,10 +186,17 @@
           cursor: not-allowed;
         }
 
-        @include hover {
-          &:not(.disabled) {
+        &:not(.current) {
+          @include hover {
+            background: var(--white-hover);
           }
         }
+
+        // &:not(.disabled) {
+        //   @include hover {
+        //     background: var(--white-hover);
+        //   }
+        // }
       }
     }
   }

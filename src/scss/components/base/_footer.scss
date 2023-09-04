@@ -113,6 +113,10 @@
               &:last-child {
                 a {
                   opacity: 0.5;
+
+                  @include hover {
+                    opacity: 1;
+                  }
                 }
               }
             }
@@ -175,6 +179,10 @@
           padding-top: 1.5rem;
           padding-bottom: 1.5rem;
         }
+
+        @include hover {
+          opacity: 0.5;
+        }
       }
 
       span {
@@ -229,6 +237,14 @@
         svg {
           fill: var(--white);
           width: 1.1rem;
+        }
+
+        @include hover {
+          background: var(--white);
+
+          svg {
+            fill: var(--blue);
+          }
         }
       }
     }
