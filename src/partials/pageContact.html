@@ -54,9 +54,9 @@
               как персонализированные, так и анонимные сообщения. Обращение
               будет обработано на конфиденциальной основе!
             </p>
-            <button class="buttonC primary">Горячая линия</button>
+            <a href="" class="buttonC primary">Горячая линия</a>
           </div>
-          <div class="form relative">
+          <form class="form data-form relative">
             <h2>По остальным вопросам обращайтесь к нам через форму ниже:</h2>
             <div class="form__container relative">
               <span
@@ -69,11 +69,15 @@
                   <div class="form__warning"></div>
                 </div>
                 <div class="form__input">
-                  <input type="text" placeholder="Телефон" />
+                  <input type="tel" placeholder="Телефон" />
                   <div class="form__warning"></div>
                 </div>
                 <div class="form__input">
-                  <input type="text" placeholder="E-mail" />
+                  <input
+                    class="data-test-email"
+                    type="email"
+                    placeholder="E-mail*"
+                  />
                   <div class="form__warning"></div>
                 </div>
                 <div class="form__input">
@@ -82,17 +86,28 @@
                 </div>
               </div>
               <div class="form__last">
-                <button class="buttonC primary">Отправить</button>
+                <button class="buttonC primary data-submit">Отправить</button>
                 <div class="form__last--copyright">
                   <span
                     >Нажимая кнопку отправить, вы соглашаетесь с нашей
                   </span>
-                  <a href="policy.html">политикой конфедециальности</a>
+                  <a href="policy.html">политикой конфиденциальности</a>
+                </div>
+                <div class="form__last--error data-error display-none">
+                  Не верно заполнено значение.
                 </div>
               </div>
-              <div class="form__success"></div>
+              <div class="form__success data-success display-none">
+                <div class="form__success--title">
+                  Заявка успешно отправлена!
+                </div>
+                <div class="form__success--text">
+                  В ближайшее время с вами свяжется наш менеджер.
+                </div>
+                <a href="home.html" class="buttonC primary">на главную</a>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

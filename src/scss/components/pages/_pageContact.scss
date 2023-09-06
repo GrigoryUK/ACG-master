@@ -109,7 +109,7 @@
       }
     }
 
-    button {
+    .buttonC {
       margin-top: 5rem;
       max-width: 24.6rem;
 
@@ -180,12 +180,10 @@
     &__input {
       position: relative;
       width: 100%;
-      border-bottom: 1px solid var(--white-4);
-      padding-bottom: 3rem;
+
       @include mb(3rem);
 
       @include tablet {
-        padding-bottom: 3rem;
         @include mb(3rem);
       }
 
@@ -198,10 +196,40 @@
         font-size: 1.8rem;
         width: 100%;
         padding-right: 1rem;
+        border-bottom: 1px solid var(--white-4);
+        padding-bottom: 3rem;
+
+        @include mobile {
+          padding-bottom: 2rem;
+        }
 
         &::placeholder {
           font-size: 1.8rem;
           opacity: 0.4;
+        }
+
+        &.focus-visible {
+          border-bottom: 1px solid var(--blue);
+          &::placeholder {
+            opacity: 0.3;
+          }
+        }
+
+        &.error {
+          border-bottom: 1px solid var(--red);
+          color: var(--red);
+          &::placeholder {
+            color: var(--red);
+          }
+        }
+
+        @include hover {
+          &:not(.error) {
+            border-bottom: 1px solid var(--blue);
+            &::placeholder {
+              opacity: 0.3;
+            }
+          }
         }
       }
     }
@@ -210,6 +238,7 @@
       display: flex;
       align-items: center;
       gap: 3rem;
+      position: relative;
 
       @include mobile {
         flex-direction: column;
@@ -227,6 +256,78 @@
 
         a {
           text-decoration: underline;
+
+          @include hover {
+            color: var(--blue);
+          }
+        }
+      }
+
+      &--error {
+        position: absolute;
+        left: 0;
+        bottom: -4rem;
+        color: var(--red);
+        font-size: 1.4rem;
+
+        @include mobile {
+          font-size: 1.3rem;
+          bottom: -3rem;
+        }
+      }
+    }
+
+    &__success {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: var(--z-success);
+      background: var(--white-2);
+      border-radius: 1rem;
+      // opacity: 0.3;
+      padding: 4rem 5rem 7rem;
+
+      @include tablet {
+        padding: 4rem 3rem 7rem;
+      }
+
+      @include mobile {
+        padding: 1.5rem 1.5rem 4rem;
+      }
+
+      &--title {
+        display: block;
+        margin-bottom: 2.4rem;
+        font-size: 2.2rem;
+
+        @include tablet {
+          max-width: 60%;
+          margin-bottom: 3rem;
+        }
+
+        @include mobile {
+          font-size: 1.6rem;
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
+      }
+
+      &--text {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+
+      .buttonC {
+        max-width: 26.4rem;
+
+        @include mobile {
+          max-width: 100%;
         }
       }
     }

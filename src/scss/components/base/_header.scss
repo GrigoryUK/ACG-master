@@ -8,6 +8,45 @@
   max-width: 192rem;
   padding: 0 5rem;
   padding-top: 2rem;
+  z-index: var(--z-header);
+
+  &.header--white {
+    .header__links--top ul a {
+      color: var(--white);
+
+      @include hover {
+        color: var(--white-hover);
+      }
+    }
+
+    .header__links--languages a.active {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .header__links--languages a {
+      color: var(--white);
+    }
+
+    .header__links--bottom a {
+      color: var(--white);
+    }
+
+    .header__logo svg {
+      fill: var(--white);
+    }
+
+    .header__burger .burger__line {
+      background: var(--white);
+    }
+
+    .header__burger .burger {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+
+      @include mobile {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
 
   @include tablet {
     padding: 0 1.5rem;

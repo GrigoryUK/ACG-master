@@ -1,0 +1,61 @@
+.pageProduct {
+  &__main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 13rem;
+
+    @include tablet {
+      margin-bottom: 10rem;
+    }
+
+    @include mobile {
+      margin-bottom: 5rem;
+    }
+
+    &--bg {
+      &.desk {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &.mobile {
+        display: none;
+
+        @include mobile {
+          display: flex;
+        }
+      }
+    }
+
+    &--fon {
+      @include mobile {
+        position: absolute;
+        height: 36vh;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(0deg, #031032 0%, rgba(3, 16, 50, 0) 100%);
+      }
+    }
+
+    &--word {
+      position: absolute;
+      left: 18vw;
+      top: 42vh;
+      max-width: 31vw;
+      max-height: 14vh;
+      object-fit: contain;
+
+      @include mobile {
+        bottom: 10vh;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: contain;
+        max-width: 88vw;
+        max-height: 11vh;
+      }
+    }
+  }
+}

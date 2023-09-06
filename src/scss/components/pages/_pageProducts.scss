@@ -90,6 +90,19 @@
         &--fon {
           // position: absolute;
           position: relative;
+          max-width: 57.4rem;
+          border-radius: 100%;
+          overflow: hidden;
+        }
+
+        &--blur {
+          filter: blur(0.2rem);
+          transform: scale(1.1);
+
+          @include tablet {
+            filter: blur(0rem);
+            transform: scale(1);
+          }
         }
 
         img {
@@ -171,6 +184,11 @@
         .itemC__fon--blue {
           opacity: 1;
           visibility: visible;
+        }
+
+        .itemC__fon--blur {
+          transform: scale(1);
+          filter: blur(0);
         }
 
         .itemC__bottle--img {

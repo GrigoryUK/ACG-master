@@ -44,5 +44,14 @@
         font-size: 1.4rem;
       }
     }
+
+    @include hover {
+      img {
+        background: var(--white);
+      }
+      span {
+        color: var(--blue);
+      }
+    }
   }
 }
