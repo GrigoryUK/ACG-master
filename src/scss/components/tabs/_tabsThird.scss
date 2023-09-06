@@ -1,0 +1,138 @@
+.tabs__third {
+  &--nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+    margin-bottom: 12rem;
+    max-width: 120.8rem;
+
+    @include tablet {
+      overflow-x: auto;
+      margin-bottom: 7rem;
+      padding-left: max(1.5rem, (100% - 192rem) / 2);
+      padding-bottom: 6rem;
+    }
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &--item {
+    width: 100%;
+    max-width: 15.1rem;
+
+    @include tablet {
+      max-width: 15rem;
+      flex-shrink: 0;
+
+      &:last-child {
+        margin-right: 1.5rem;
+      }
+    }
+
+    @include small-tablet {
+      max-width: 12rem;
+    }
+
+    @include mobile {
+      max-width: 10.4rem;
+    }
+  }
+
+  &--content {
+    max-width: 130.8rem;
+    margin: 0 auto;
+  }
+
+  &--btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &.tabs__nav-btn--active {
+      img {
+        opacity: 1 !important;
+      }
+
+      .itemC__line {
+        background: var(--blue);
+      }
+
+      .itemC__name {
+        opacity: 1 !important;
+      }
+    }
+
+    &:not(.tabs__nav-btn--active) {
+      @include hover {
+        img {
+          opacity: 1;
+        }
+
+        .itemC__line {
+          background: #6794d4;
+        }
+      }
+    }
+
+    .itemC {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      position: relative;
+
+      img {
+        // max-width: 8vw;
+        user-select: none;
+        pointer-events: none;
+        opacity: 0.5;
+        max-width: 100%;
+        @include mobile {
+          max-width: 90%;
+        }
+      }
+
+      &__line {
+        width: 100%;
+        height: 0.1rem;
+        background: #ced7e1;
+        margin-top: 6.4rem;
+        margin-bottom: 3rem;
+        transition: all 0.2s ease;
+
+        @include small-tablet {
+          margin-top: 6rem;
+          margin-bottom: 2.8rem;
+        }
+      }
+
+      &__name {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.4;
+        opacity: 0.5;
+        color: var(--black);
+        max-width: 12rem;
+        text-align: center;
+        position: absolute;
+        bottom: -5rem;
+        min-height: 5rem;
+
+        @include small-tablet {
+          bottom: -4rem;
+        }
+
+        @include mobile {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

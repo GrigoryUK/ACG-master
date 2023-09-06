@@ -1,16 +1,19 @@
-import $ from 'jquery'
-import Swiper, { Autoplay, EffectFade, FreeMode, Navigation, Pagination } from 'swiper'
-Swiper.use([Navigation, Pagination, EffectFade, Autoplay, FreeMode]);
+import Swiper, { Autoplay, EffectFade, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper'
+Swiper.use([Navigation, Pagination, EffectFade, Autoplay, FreeMode, Scrollbar]);
 
 export default function sliders() {
-  const slidersAbout = $('.slider-about');
+  sliderAbout();
+  sliderAlso()
+  sliderHistory()
+  sliderHome()
+}
 
-
-    const swiper = new Swiper('.slider-about', {
+function sliderAbout() {
+  const swiper = new Swiper('.slider-about', {
     slidesPerView: 'auto',
     loop: true,
     effect: 'fade',
-    speed: 1800,
+    speed: 1500,
     fadeEffect: {
       crossFade: true
     },
@@ -20,6 +23,9 @@ export default function sliders() {
       disableOnInteraction: false,
     },
   });
+}
+
+function sliderHistory() {
 
   const containerHistory = document.querySelector('.pageHistory__slider');
 
@@ -30,7 +36,7 @@ export default function sliders() {
 
     const swiper = new Swiper(slider, {
       slidesPerView: 'auto',
-      speed: 1800,
+      speed: 1500,
       spaceBetween: 15,
       freeMode: true,
 
@@ -58,5 +64,67 @@ export default function sliders() {
       },
 
     });
+  }
+}
+
+function sliderHome() {
+  const containerHome = document.querySelector('.pageHome__slider');
+
+  if (containerHome) {
+    const slider = containerHome.querySelector('.home-slider');
+    const prev = containerHome.querySelector('.pageHome__slider--prev');
+    const next = containerHome.querySelector('.pageHome__slider--next');
+
+
+    const swiper = new Swiper(slider, {
+      slidesPerView: 1,
+      loop: true,
+      effect: 'fade',
+      speed: 1500,
+      fadeEffect: {
+        crossFade: true
+      },
+
+      navigation: {
+        nextEl: next,
+        prevEl: prev,
+      },
+
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
+    });
+  }
+
+}
+
+function sliderAlso() {
+
+  const containerAlso = document.querySelector('.pageProduct__also');
+
+  if (containerAlso) {
+    const slider = containerAlso.querySelector('.also-slider');
+
+    const swiper = new Swiper(slider, {
+      slidesPerView: 'auto',
+      spaceBetween: 70,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+
+      breakpoints: {
+
+        768: {
+          spaceBetween: 0,
+          slidesPerView: 5,
+        },
+
+      },
+
+
+
+    });
+
   }
 }

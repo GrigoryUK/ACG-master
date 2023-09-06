@@ -56,6 +56,10 @@
         padding: 2rem 7rem 1.8rem;
         width: 100%;
       }
+
+      @include hover {
+        background: var(--blue-hover);
+      }
     }
   }
 }
