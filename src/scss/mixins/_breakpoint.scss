@@ -6,6 +6,12 @@
   }
 }
 
+@mixin for-desktop-big {
+  @media (min-width: (2180px)) {
+    @content;
+  }
+}
+
 @mixin big-desktop {
   @media (max-width: (1440px)) {
     @content;

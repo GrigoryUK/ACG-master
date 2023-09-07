@@ -63,7 +63,7 @@
       }
 
       p {
-        max-width: 80rem;
+        max-width: 89rem;
       }
 
       &--title {
@@ -139,7 +139,12 @@
       background: var(--white-2);
       border-radius: 0px 1rem 1rem 0px;
       width: 50%;
-      padding: 13rem 5rem 34rem 13rem;
+      padding: 9rem 5rem 13rem 10rem;
+      min-height: 71rem;
+
+      @include big-desktop {
+        min-height: 0;
+      }
 
       img {
         width: auto;
@@ -232,7 +237,7 @@
   }
 
   &__last {
-    max-width: 150.8rem;
+    max-width: 155rem;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;

@@ -134,7 +134,7 @@
 
       &.secondary {
         .itemC__text {
-          max-width: 997px;
+          max-width: 100rem;
 
           @include tablet {
             max-width: 68rem;
@@ -316,8 +316,8 @@
         }
 
         @include mobile {
-          width: 8px;
-          height: 15px;
+          width: 0.8rem;
+          height: 1.5rem;
         }
 
         &.desk {
@@ -340,7 +340,7 @@
       left: 6rem;
       transform: translateY(-50%) rotate(180deg);
 
-      @include big-desktop {
+      @include tablet {
         left: 1.5rem;
       }
 
@@ -352,7 +352,7 @@
     &--next {
       right: 6rem;
 
-      @include big-desktop {
+      @include tablet {
         right: 1.5rem;
       }
 
