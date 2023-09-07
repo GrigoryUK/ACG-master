@@ -25,21 +25,17 @@
   }
 
   &__logo {
-    width: 16.4rem;
+    width: 18.4rem;
     height: 6rem;
+    margin-bottom: -4px;
 
     @include mobile {
-      width: 13.6rem;
+      width: 14.6rem;
       height: 5rem;
     }
 
     svg {
-      width: 16.4rem;
       fill: var(--blue);
-
-      @include mobile {
-        width: 13.6rem;
-      }
     }
   }
 
