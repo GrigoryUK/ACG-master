@@ -157,6 +157,17 @@
     }
 
     &--img {
+      width: 100%;
+      height: 100%;
+      max-width: 8%;
+
+      @include tablet {
+        max-width: 11%;
+      }
+
+      @include small-tablet {
+        max-width: 15%;
+      }
       @include mobile {
         display: none;
       }

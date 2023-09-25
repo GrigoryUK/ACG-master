@@ -68,13 +68,15 @@
     width: 18.4rem;
 
     @include mobile {
-      width: 14.6rem;
+      width: 16.6rem;
     }
 
     svg {
+      width: 18.4rem;
       fill: var(--blue);
 
       @include mobile {
+        width: 16.6rem;
       }
     }
   }
@@ -179,8 +181,8 @@
     }
 
     @include mobile {
-      width: 5rem;
-      height: 5rem;
+      width: 5.5rem;
+      height: 5.5rem;
     }
 
     .burger {
@@ -191,8 +193,8 @@
       border: 2px solid rgba(0, 82, 200, 0.2);
 
       @include mobile {
-        width: 5rem;
-        height: 5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         border: 1px solid rgba(0, 82, 200, 0.2);
       }
 
