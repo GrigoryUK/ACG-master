@@ -118,6 +118,10 @@
         width: 100vw;
       }
 
+      video {
+        background: #040f2f;
+      }
+
       .video-desk {
         @include tablet {
           display: none;
@@ -175,6 +179,7 @@
 
         .buttonC {
           box-sizing: border-box;
+
           @include mobile {
             // max-width: 29rem;
             max-width: 100%;

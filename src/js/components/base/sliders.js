@@ -1,5 +1,5 @@
-import Swiper, { Autoplay, EffectFade, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper'
-Swiper.use([Navigation, Pagination, EffectFade, Autoplay, FreeMode, Scrollbar]);
+import Swiper, { Autoplay, EffectCards, EffectCoverflow, EffectCreative, EffectFade, FreeMode, Lazy, Navigation, Pagination, Scrollbar } from 'swiper'
+Swiper.use([Navigation, Pagination, EffectFade, Autoplay, FreeMode, Scrollbar, Lazy, EffectCards, EffectCoverflow, EffectCreative]);
 
 export default function sliders() {
   sliderAbout();
@@ -7,6 +7,44 @@ export default function sliders() {
   sliderHistory()
   sliderHome()
 }
+
+
+function sliderHome() {
+  const containerHome = document.querySelector('.pageHome__slider');
+
+  if (containerHome) {
+    const slider = containerHome.querySelector('.home-slider');
+    const prev = containerHome.querySelector('.pageHome__slider--prev');
+    const next = containerHome.querySelector('.pageHome__slider--next');
+
+
+    const swiper = new Swiper(slider, {
+      slidesPerView: 1,
+      loop: true,
+      effect: 'creative',
+      speed: 1500,
+      creativeEffect: {
+        prev: {
+          translate: ["-105%", 0, 0],
+          shadow: true,
+        },
+        next: {
+          translate: [0, 0, -1],
+          shadow: true,
+        },
+      },
+
+      navigation: {
+        nextEl: next,
+        prevEl: prev,
+      },
+
+    });
+  }
+
+}
+
+
 
 function sliderAbout() {
   const swiper = new Swiper('.slider-about', {
@@ -67,33 +105,6 @@ function sliderHistory() {
   }
 }
 
-function sliderHome() {
-  const containerHome = document.querySelector('.pageHome__slider');
-
-  if (containerHome) {
-    const slider = containerHome.querySelector('.home-slider');
-    const prev = containerHome.querySelector('.pageHome__slider--prev');
-    const next = containerHome.querySelector('.pageHome__slider--next');
-
-
-    const swiper = new Swiper(slider, {
-      slidesPerView: 1,
-      loop: true,
-      effect: 'fade',
-      speed: 1500,
-      fadeEffect: {
-        crossFade: true
-      },
-
-      navigation: {
-        nextEl: next,
-        prevEl: prev,
-      },
-
-    });
-  }
-
-}
 
 function sliderAlso() {
 
