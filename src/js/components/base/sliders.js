@@ -21,16 +21,18 @@ function sliderHome() {
     const swiper = new Swiper(slider, {
       slidesPerView: 1,
       loop: true,
+      maxBackfaceHiddenSlides: 10,
       effect: 'creative',
       speed: 1500,
       creativeEffect: {
+
         prev: {
           translate: ["-105%", 0, 0],
-          shadow: true,
+          opacity: 0.95,
         },
         next: {
           translate: [0, 0, -1],
-          shadow: true,
+          opacity: 0.95,
         },
       },
 
@@ -38,7 +40,6 @@ function sliderHome() {
         nextEl: next,
         prevEl: prev,
       },
-
     });
   }
 
